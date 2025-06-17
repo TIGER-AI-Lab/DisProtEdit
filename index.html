@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DisProtEdit is a controllable protein editing framework that leverages dual-channel natural language supervision and angular disentanglement to edit protein sequences via text. It separates structural and functional properties through alignment, uniformity, and MMD losses. Built upon SwissProtDis, a 540K protein-text dataset, DisProtEdit supports interpretable and modular edits and achieves state-of-the-art results on both single and multi-attribute editing benchmarks.">
+    <meta property="og:title" content="DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing" />
+    <meta property="og:description" content="DisProtEdit is a controllable protein editing framework that leverages dual-channel natural language supervision and angular disentanglement to edit protein sequences via text. It separates structural and functional properties through alignment, uniformity, and MMD losses. Built upon SwissProtDis, a 540K protein-text dataset, DisProtEdit supports interpretable and modular edits and achieves state-of-the-art results on both single and multi-attribute editing benchmarks." />
+    <meta property="og:url" content="https://tiger-ai-lab.github.io/DisProtEdit/" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/images/teaser.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing">
+    <meta name="twitter:description" content="">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/teaser.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="DisProtEdit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>DisProtEdit</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon_io/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="static/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="static/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title"> DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing </h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                <sup>♠️†</sup><a href="https://kuwingfung.github.io/" target="_blank">Max Ku</a>,</span>
+                            <span class="author-block">
+                  <sup>♠️♡</sup><a href="https://scholar.google.com/citations?user=2X_jP6kAAAAJ&hl=en" target="_blank">Sun Sun</a>,
+                            <span class="author-block">
+                    <sup>♡</sup><a href="https://hongyuharryguo.github.io/" target="_blank">Hongyu Guo</a>,
+                  </span>
+                            <span class="author-block">
+                    <sup>♠️†</sup><a href="https://wenhuchen.github.io/" target="_blank">Wenhu Chen</a>
+                  </span>
+                        </div>
+
+
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                    <sup>♠️</sup>University of Waterloo,
+                    <sup>♡</sup>National Research Council Canada,
+                    <sup>†</sup>Vector Institute
+                            </span>
+                            <span class="author-block"><small>m3ku@uwaterloo.ca, sun.sun@uwaterloo.ca, wenhu.chen@uwaterloo.ca</small></span>
+
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <h2 class="title is-5">ICMLW 2025 (GenBio, FM4LS)</h2>
+                            <div class="publication-links">
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                      <a href="https://github.com/TIGER-AI-Lab/DisProtEdit" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                                <span>Code</span>
+                                </a>
+                                </span>
+
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                <a href="" target="_blank"
+                                class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <i class="ai ai-arxiv"></i>
+                                </span>
+                                <span>arXiv (Coming Soon)</span>
+                                </a>
+                                </span>
+                                
+                                <!-- 
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/datasets/TIGER-Lab/TheoremExplainBench" target="_blank"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                      🤗
+                                    </span>
+                                    <span>Dataset</span>
+                                    </a>
+                                </span>
+                                -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <img src="static/images/teaser.png" alt="DisProtEdit" width="90%"/>
+                        <h2 class="subtitle">
+                            <b>Figure 1:</b> (a, c) Original protein sequences with their corresponding structural and functional attributes. (b, d) Edited proteins generated by DisProtEdit in response to compositional prompts: (b) increase alpha-helices and increase Pin1 stability; (d) increase beta-sheets and increase Villin stability. These edits are considered among the most difficult combinations in our benchmark, where prior methods tend to fail. Despite the challenge, DisProtEdit demonstrates the ability to generate meaningful and plausible modifications. <b>This highlights the model’s capacity to perform multi-attribute editing via modular, text-guided control over distinct biological properties.</b>
+                        </h2>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                DisProtEdit is a controllable protein editing framework that disentangles structural and functional representations via dual-channel natural language supervision. Each protein is annotated with structure and function texts, derived automatically using GPT-4o, forming the SwissProtDis dataset (540k entries). Our model uses alignment and uniformity objectives for modality fusion and introduces a novel angular MMD loss for disentanglement. Editing is performed by modifying text prompts and interpolating in latent space, supporting modular control. We evaluate on a new multi-attribute editing benchmark and TAPE tasks, showing strong accuracy (up to 61.7% both-hit edit success) and competitive downstream performance, with improved interpretability and controllability.
+                                </p>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Methodology and Benchmark -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h2 class="title is-3">How DisProtEdit works?</h2>
+                        <img src="static/images/method.png" alt="MY ALT TEXT" width="90%"/>
+                        <h2 class="subtitle">
+                            <b>Figure 2:</b> Overview of the DisProtEdit framework. (a) During training, a protein sequence and its corresponding structural and functional text descriptions are encoded into a shared embedding space using three loss functions: <b>alignment</b>, <b>uniformity</b>, and <b>angular MMD</b>. The <b>alignment loss</b> ensures that the protein embedding closely matches the concatenated structural and functional embeddings. The <b>uniformity loss</b> prevents representational collapse by encouraging embeddings to be spread uniformly on the hypersphere. To disentangle structural and functional semantics, we introduce a novel <b>angular MMD (Maximum Mean Discrepancy)</b> loss that separates the latent space into orthogonal subspaces, one for structure and one for function. (b) A T5-based decoder is trained to reconstruct protein sequences from the learned embeddings. (c) During editing, a new text prompt is used to generate an updated embedding, which is interpolated with the original using spherical linear interpolation (slerp), allowing precise, modular edits. (d) The SwissProtDis dataset is constructed by automatically decomposing UniProt annotations into structural and functional texts using GPT-4o, enabling dual-channel supervision at scale.
+                        </h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Methodology and Benchmark -->
+
+
+    <!-- Case study -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h2 class="title is-3">Findings</h2>
+                        <p>
+                            This method still far from perfect, as protein editing is a very challenging task. But we uncovered several key findings. First, alignment and uniformity objectives effectively integrate protein and text modalities. Second, angular MMD loss is essential for separating structure/function semantics. Lastly, DisProtEdit supports fine-grained control over edits, including hard cases like increasing helices and boosting stability, though these remain biologically challenging tasks.
+                        </p>
+                            
+                        <br>
+                        <img src="static/images/visualization_1.png" alt="MY ALT TEXT" width="75%"/>
+                        <h2 class="subtitle">
+                            Figure 3: We visualize UMAP projections of protein and text embeddings learned under different training strategies: (a) random projection, (b) contrastive learning, (c) contrastive learning followed by fine-tuning with alignment loss, and (d) DisProtEdit (ours). While contrastive learning improves cross-modal alignment over random projection, it still leaves a noticeable modality gap. This gap can be reduced with an additional fine-tuning stage using alignment loss, as shown in (c). In contrast, DisProtEdit achieves comparable cross-modal integration and semantic disentanglement in a single-stage training setup. This demonstrates the effectiveness of our alignment and uniformity objectives for learning meaningful, multimodal representations without requiring separate post-hoc alignment.
+                        </h2>
+                        <img src="static/images/visualization_2.png" alt="MY ALT TEXT" width="75%"/>
+                        <img src="static/images/visualization_3.png" alt="MY ALT TEXT" width="75%"/>
+                        <h2 class="subtitle">
+                            <b>Figure 4:</b> We present SVD projections of the learned embeddings under varying levels of the disentanglement weight λ<sub>D</sub>, which controls the strength of the angular Maximum Mean Discrepancy (MMD) loss. When λ<sub>D</sub> = 0, structural and functional embeddings are highly entangled, forming overlapping distributions that indicate weak semantic separation. As λ<sub>D</sub> increases, we observe growing divergence between these two modalities. At λ<sub>D</sub> = 1.0, the separation is most effective, as structural and functional text embeddings form two distinct and symmetric clusters. This confirms that the angular MMD loss successfully encourages modular latent subspaces, enabling interpretable and targeted edits. However, excessively large λ<sub>D</sub> (e.g., 5.0) may reduce alignment quality and editing success due to over-regularization. These results demonstrate the importance of balancing disentanglement strength with alignment to maintain both semantic clarity and editability in the learned representation space.
+                        </h2>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Case Study -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h2 class="title is-3">Limitations</h2>
+                <div class="content has-text-justified">
+                  <ul>
+                    <li><b>LLM-derived supervision quality:</b> Our dual-channel structural and functional descriptions are generated using GPT-4o, based on UniProt annotations. While this enables scalable dataset construction, it may introduce hallucinations or imprecise interpretations, potentially affecting downstream model performance and biological reliability.</li>
+                    <li><b>Oracle-based evaluation bias:</b> Editing success is assessed using pretrained predictors, which may be inaccurate on out-of-distribution sequences or subtle modifications. This limits the biological fidelity of evaluation and motivates future work involving wet-lab validation or structure-aware assessment.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- BibTex citation-->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">Citation</h2>
+            Please kindly cite our paper if you use our code, data, models or results:
+            <br><br>
+            <pre><code>@inproceedings{ku2025disprotedit,
+                title={DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing},
+                author={Max Ku and Sun Sun and Hongyu Guo and Wenhu Chen},
+                booktitle={Proceedings of the 2nd ICML Workshop on Generative AI and Biology (GenBio)},
+                year={2025}
+              }
+            </code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+
+                        <p>
+                            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a>                            project page. You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                                target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<style>
+    .buttonGroup {
+        text-align: center;
+    }
+    
+    .buttonGroup>button {
+        padding: 15px;
+        color: white;
+        background-color: #363636;
+        border-radius: 5px;
+    }
+    
+    .buttonGroup>button:hover {
+        box-shadow: 5px;
+    }
+</style>
+
+</html>
