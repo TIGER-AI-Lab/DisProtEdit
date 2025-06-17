@@ -1,4 +1,4 @@
-# 🧬 DisProtEdit: Disentangled Representations for Protein Editing
+# 🧬 DisProtEdit
 
 [![arXiv](https://img.shields.io/badge/arXiv-TBA-b31b1b.svg)](https://arxiv.org/TBA)
 
