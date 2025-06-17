@@ -6,7 +6,6 @@
 
 [![license](https://img.shields.io/github/license/TIGER-AI-Lab/DisProtEdit.svg)](https://github.com/TIGER-AI-Lab/DisProtEdit/blob/main/LICENSE)
 [![GitHub](https://img.shields.io/github/stars/TIGER-AI-Lab/DisProtEdit?style=social)](https://github.com/TIGER-AI-Lab/DisProtEdit)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTIGER-AI-Lab%2FDisProtEdit&count_bg=%237A91C0&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 
 This repo contains the codebase for our paper:  
 **DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing**
