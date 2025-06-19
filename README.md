@@ -49,9 +49,13 @@ _**Under construction**_
 ## 📖 Citation
 
 ```bibtex
-@inproceedings{ku2025disprotedit,
-  title={DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing},
-  author={Max Ku and Sun Sun and Hongyu Guo and Wenhu Chen},
-  booktitle={ICML Workshop on Generative AI and Biology},
-  year={2025}
+@misc{ku2025disproteditexploringdisentangledrepresentations,
+      title={DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing}, 
+      author={Max Ku and Sun Sun and Hongyu Guo and Wenhu Chen},
+      year={2025},
+      booktitle={ICML Workshop on Generative AI and Biology},
+      eprint={2506.14853},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.QM},
+      url={https://arxiv.org/abs/2506.14853}, 
 }
