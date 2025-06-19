@@ -1,8 +1,8 @@
 # 🧬 DisProtEdit
 
-[![arXiv](https://img.shields.io/badge/arXiv-TBA-b31b1b.svg)](https://arxiv.org/TBA)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.14853-b31b1b.svg)](https://arxiv.org/2506.14853)
 
-[**🌐 Homepage**](https://tiger-ai-lab.github.io/DisProtEdit/)  | [**📖 arXiv**](https://arxiv.org/TBA) 
+[**🌐 Homepage**](https://tiger-ai-lab.github.io/DisProtEdit/)  | [**📖 arXiv**](https://arxiv.org/2506.14853) 
 
 [![license](https://img.shields.io/github/license/TIGER-AI-Lab/DisProtEdit.svg)](https://github.com/TIGER-AI-Lab/DisProtEdit/blob/main/LICENSE)
 [![GitHub](https://img.shields.io/github/stars/TIGER-AI-Lab/DisProtEdit?style=social)](https://github.com/TIGER-AI-Lab/DisProtEdit)
@@ -22,6 +22,7 @@ DisProtEdit is a protein editing framework that disentangles structural and func
 
 ## 📰 News
 
+- **2025 Jun 18**: Paper available on Arxiv.
 - **2025 Jun 17**: Website created!  
 - **2025 Jun 11**: DisProtEdit accepted to ICMLW GenBio.
 - **2025 Jun 10**: DisProtEdit accepted to ICMLW FM4LS.  
