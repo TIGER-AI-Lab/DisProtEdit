@@ -22,7 +22,7 @@ DisProtEdit is a protein editing framework that disentangles structural and func
 
 ## 📰 News
 
-- **2025 Jun 20**: Released SwissProtDis Dataset.
+- **2025 Jun 20**: Released SwissProtDis Dataset, Editing benchmark, also the full training code.
 - **2025 Jun 18**: Paper available on Arxiv.
 - **2025 Jun 17**: Website created!  
 - **2025 Jun 11**: DisProtEdit accepted to ICMLW GenBio.
@@ -40,9 +40,91 @@ We introduce **SwissProtDis**, a large-scale multimodal dataset containing:
 
 ---
 
+## Environment Setup
+
+```
+conda create -n disprot python=3.10
+conda activate disprot
+pip install -r requirements.txt
+```
+
+## Training
+
+Training multimodal embeddings
+```shell
+./1_SFs.sh 
+./2_empty_SFs.sh 
+./2_sample_SFs.sh
+```
+
+Alternatively, you can run:
+```shell
+export OUTPUT_DIR="output/"
+export PRETRAINED_DIR="output/SFs_AU_b24_gpt4o_500k_DisAngle10"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3\
+        python3 pretrain_step_01_SFs.py \
+        --protein_lr=1e-5 --protein_lr_scale=1 \
+        --text_lr=1e-5 --text_lr_scale=1 --CL_loss="EBM_NCE"\
+        --protein_backbone_model=ProtBERT_BFD --wandb_name="SFs_AU05_b24_gpt4o_500k"\
+        --epochs=10 --batch_size=24 --num_workers=0 --verbose \
+        --output_model_dir="$OUTPUT_DIR" --CL=0.0 --D=0.0 --U=0.5 --A=1.0 --dis_angle --ds_llm="gpt4o" --ds_name="500k"
+
+python3 pretrain_step_02_empty_sequence_SFs.py \
+--protein_backbone_model=ProtBERT_BFD \
+--batch_size=16 --num_workers=4 \
+--pretrained_folder="$PRETRAINED_DIR" \
+--target_subfolder="pairwise_all"
+
+python3 pretrain_step_02_pairwise_representation_SFs.py \
+--protein_backbone_model=ProtBERT_BFD \
+--batch_size=16 --num_workers=4 \
+--pretrained_folder="$PRETRAINED_DIR" \
+--target_subfolder="pairwise_all" \
+--ds_llm="gpt4o"
+
+```
+
+Training decoder for editing task
+```shell
+./4_SFs.sh
+```
+
+Alternatively, you can run:
+```shell
+export PRETRAINED_DIR="output/SFs_AU_b24_gpt4o_500k_DisAngle10"
+CUDA_VISIBLE_DEVICES=0\
+        python pretrain_step_04_decoder_SFs.py \
+        --batch_size=8 --lr=1e-4 --epochs=10 \
+        --decoder_distribution=T5Decoder \
+        --score_network_type=T5Base --wandb_name="SFs_AU_b24_gpt4o_500k_DisAngle10"\
+        --hidden_dim=16  --verbose \
+        --pretrained_folder="$PRETRAINED_DIR" \
+        --output_model_dir="$PRETRAINED_DIR"/step_04_T5 \
+        --target_subfolder="pairwise_all"
+```
+
 ## 🧪 Editing Benchmark
 
-_**Under construction**_
+Please see [_datasets_and_checkpoints](https://github.com/TIGER-AI-Lab/DisProtEdit/blob/main/_datasets_and_checkpoints).
+
+## Downstream Tasks
+
+### Editing
+
+Multi-Attribute Protein Editing
+```shell
+./5_medit.sh
+```
+
+### TAPE
+
+Protein Properties Prediction
+```shell
+./5_TAPE.sh
+```
+
+The code is built upon [TAPE in ProteinDT](https://github.com/chao1224/ProteinDT/blob/main/examples/downstream_TAPE.py).
 
 ---
 
@@ -63,8 +145,7 @@ _**Under construction**_
 ```
 
 ## 💞 Acknowledgements
-The code is built upon the below repositories, we thank all the contributors for open-sourcing.
-* [ProteinDT](https://github.com/chao1224/ProteinDT)
+This code is heavily built upon [ProteinDT](https://github.com/chao1224/ProteinDT). we thank all the contributors for open-sourcing.
 
 
 
