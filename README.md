@@ -110,6 +110,8 @@ CUDA_VISIBLE_DEVICES=0\
 ## 🧪 Editing Benchmark
 
 Please see [_datasets_and_checkpoints](https://github.com/TIGER-AI-Lab/DisProtEdit/blob/main/_datasets_and_checkpoints).
+* The benchmark contains 196 protein inputs, suitable for protein editing on structure editing and functional editing. 
+* Please refer to `editing_dis_interpolation.py`.
 
 ## Downstream Tasks
 
