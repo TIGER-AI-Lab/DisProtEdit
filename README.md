@@ -35,7 +35,7 @@ We introduce **SwissProtDis**, a large-scale multimodal dataset containing:
 - ~540,000 protein sequences
 - Automatically decomposed structural and functional text descriptions from UniProt using GPT-4o
 
-👉 [TBA: Hugging Face dataset link]
+👉 [https://huggingface.co/datasets/TIGER-Lab/SwissProtDis_500k](https://huggingface.co/datasets/TIGER-Lab/SwissProtDis_500k)
 
 ---
 
@@ -59,3 +59,11 @@ _**Under construction**_
       primaryClass={q-bio.QM},
       url={https://arxiv.org/abs/2506.14853}, 
 }
+```
+
+## 💞 Acknowledgements
+The code is built upon the below repositories, we thank all the contributors for open-sourcing.
+* [ProteinDT](https://github.com/chao1224/ProteinDT)
+
+
+
