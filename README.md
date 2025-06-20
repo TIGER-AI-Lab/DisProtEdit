@@ -18,6 +18,9 @@ This repo contains the codebase for our paper:
 
 DisProtEdit is a protein editing framework that disentangles structural and functional properties using dual-channel natural language supervision. It learns modular latent representations aligned with protein sequences through a combination of alignment, uniformity, and angular MMD losses. Editing is performed via text modification, enabling interpretable and controllable edits to protein structure or function.
 
+![](https://tiger-ai-lab.github.io/DisProtEdit/static/images/method.png)
+
+
 ---
 
 ## 📰 News
