@@ -22,6 +22,7 @@ DisProtEdit is a protein editing framework that disentangles structural and func
 
 ## 📰 News
 
+- **2025 Jun 20**: Released SwissProtDis Dataset.
 - **2025 Jun 18**: Paper available on Arxiv.
 - **2025 Jun 17**: Website created!  
 - **2025 Jun 11**: DisProtEdit accepted to ICMLW GenBio.
