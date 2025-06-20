@@ -20,7 +20,7 @@ DisProtEdit is a protein editing framework that disentangles structural and func
 
 ![](https://tiger-ai-lab.github.io/DisProtEdit/static/images/method.png)
 
-
+See https://tiger-ai-lab.github.io/DisProtEdit/ for more info.
 ---
 
 ## 📰 News
