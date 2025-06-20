@@ -43,7 +43,7 @@ We introduce **SwissProtDis**, a large-scale multimodal dataset containing:
 
 ---
 
-## Environment Setup
+## ⚙️ Environment Setup
 
 ```
 conda create -n disprot python=3.10
@@ -51,7 +51,7 @@ conda activate disprot
 pip install -r requirements.txt
 ```
 
-## Training
+## 🚀 Training
 
 Training multimodal embeddings
 ```shell
@@ -113,7 +113,7 @@ Please see [_datasets_and_checkpoints](https://github.com/TIGER-AI-Lab/DisProtEd
 * The benchmark contains 196 protein inputs, suitable for protein editing on structure editing and functional editing. 
 * Please refer to `editing_dis_interpolation.py`.
 
-## Downstream Tasks
+## 🚀 Downstream Tasks
 
 ### Editing
 
